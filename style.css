@@ -1143,6 +1143,9 @@ body{
 .h-\[90px\]{
   height: 90px;
 }
+.h-\[500px\]{
+  height: 500px;
+}
 .h-1\/2{
   height: 50%;
 }
