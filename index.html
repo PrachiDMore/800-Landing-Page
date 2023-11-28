@@ -9,9 +9,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>800cal</title>
+  <title>800cal - Customer</title>
   <link rel="icon" href="images/dark-logo.png">
   <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="bg-white dark:bg-black">
@@ -161,7 +165,21 @@
     </div>
   </header>
 
-
+  <div id="popup_form"
+    style="width: 100vw; height: 100vh; position: fixed; top: 0vh; z-index: 5000; background-color: #00000074; display: flex; justify-content: center; align-items: center; transition: 300ms; opacity: 0; pointer-events: none;">
+    <div
+      style="color: white; height: 40vh; width: 40vw; background-color: rgb(24 28 49) ; border-radius: 10px; overflow-y: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px;">
+        <i class="fa-solid fa-xmark fa-lg" style="opacity: 0;"></i>
+        <h1 class="mt-30 text-center">Coming soon!</h1>
+        <i onclick="closeForm()" class="fa-solid fa-xmark fa-lg"></i>
+      </div>
+      <hr class="wp-block-separator is-style-wide">
+      <div class="text-3xl text-center py-4">
+        We will be live soon!!
+      </div>
+    </div>
+  </div>
   <main>
 
     <section id="home" class="pt-[165px]">
@@ -847,7 +865,8 @@
 
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
               <div class="wow fadeInUp group mx-auto mb-[60px] max-w-[310px] text-center" data-wow-delay=".4s">
-                <div class="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-gray text-primary duration-300 group-hover:bg-primary group-hover:text-white dark:bg-[#2A2E44] dark:text-white dark:group-hover:bg-primary">
+                <div
+                  class="mx-auto mb-8 flex h-[90px] w-[90px] items-center justify-center rounded-3xl bg-gray text-primary duration-300 group-hover:bg-primary group-hover:text-white dark:bg-[#2A2E44] dark:text-white dark:group-hover:bg-primary">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_40_18)">
                       <path
@@ -2348,31 +2367,36 @@
           </div>
           <div class="w-full px-4 lg:w-8/12 xl:w-7/12">
             <div class="-mx-4 flex flex-wrap">
-              <div class="w-full px-4 sm:w-1/2 md:w-2/12 lg:w-2/12">
+              <div class="w-full px-4 sm:w-1/2 md:w-2/12 lg:w-4/12">
                 <div class="wow fadeInUp mb-11" data-wow-delay=".25s">
                   <h3 class="mb-8 text-[22px] font-medium text-black dark:text-white">
-                    Home
+                    Routes
                   </h3>
                   <ul class="space-y-[10px]">
                     <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        Product
+                      <a href="#home" class="inline-block text-base text-body hover:text-primary">
+                        Home
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        Business
+                      <a href="#work-process" class="inline-block text-base text-body hover:text-primary">
+                        How it works
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        Enterprise
+                      <a href="#support" class="inline-block text-base text-body hover:text-primary">
+                        Support
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/vendor.html" class="inline-block text-base text-body hover:text-primary">
+                        Vendor Dashboard
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="w-full px-4 sm:w-1/2 md:w-3/12 lg:w-3/12">
+              <div class="w-full px-4 sm:w-1/2 md:w-3/12 lg:w-3/12 hidden">
                 <div class="wow fadeInUp mb-11" data-wow-delay=".3s">
                   <h3 class="mb-8 text-[22px] font-medium text-black dark:text-white">
                     About Us
@@ -2401,7 +2425,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="w-full px-4 sm:w-1/2 md:w-3/12 lg:w-3/12">
+              <div class="w-full px-4 sm:w-1/2 md:w-3/12 lg:w-3/12 hidden">
                 <div class="wow fadeInUp mb-11" data-wow-delay=".35s">
                   <h3 class="mb-8 text-[22px] font-medium text-black dark:text-white">
                     Resources
@@ -2433,29 +2457,51 @@
               <div class="w-full px-4 sm:w-1/2 md:w-4/12 lg:w-4/12">
                 <div class="wow fadeInUp mb-11" data-wow-delay=".4s">
                   <h3 class="mb-8 text-[22px] font-medium text-black dark:text-white">
-                    Tutorial
+                    Available On
                   </h3>
                   <ul class="space-y-[10px]">
-                    <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        10 Leadership Styles
+                    <div class="inline-block px-[10px]">
+                      <a href="javascript:void(0)"
+                        class="mb-5 inline-flex items-center rounded-md bg-primary py-[10px] pl-4 pr-5 text-white hover:bg-opacity-90">
+                        <span class="mr-[10px]">
+                          <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M4 28.9958V4.9125C4 4.07667 4.48167 3.34 5.19 3L19.1442 16.9542L5.19 30.9083C4.48167 30.5542 4 29.8317 4 28.9958ZM23.5642 21.3742L8.32083 30.1858L20.3483 18.1583L23.5642 21.3742ZM28.31 15.2683C28.7917 15.6508 29.1458 16.2458 29.1458 16.9542C29.1458 17.6625 28.8342 18.2292 28.3383 18.6258L25.0942 20.4958L21.5525 16.9542L25.0942 13.4125L28.31 15.2683ZM8.32083 3.7225L23.5642 12.5342L20.3483 15.75L8.32083 3.7225Z"
+                              fill="currentColor" />
+                          </svg>
+                        </span>
+                        <span class="text-left">
+                          <span class="block text-xs opacity-70">
+                            Get it on
+                          </span>
+                          <span class="block text-sm font-medium">
+                            Google Play
+                          </span>
+                        </span>
                       </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        Executive Summary Tips
+                    </div>
+                    <div class="inline-block px-[10px]">
+                      <a href="javascript:void(0)"
+                        class="mb-5 inline-flex items-center rounded-md bg-black py-[10px] pl-4 pr-5 text-white hover:bg-opacity-90 dark:bg-white dark:text-black dark:hover:bg-opacity-90">
+                        <span class="mr-[10px]">
+                          <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M26.5058 27.625C25.33 29.3817 24.0833 31.0959 22.185 31.1242C20.2867 31.1667 19.6775 30.005 17.5242 30.005C15.3567 30.005 14.6908 31.0959 12.8917 31.1667C11.0358 31.2375 9.63333 29.2967 8.44333 27.5825C6.02083 24.0834 4.165 17.6375 6.65833 13.3025C7.89083 11.1492 10.1008 9.78921 12.495 9.74671C14.3083 9.71837 16.0367 10.9792 17.1558 10.9792C18.2608 10.9792 20.3575 9.46337 22.5533 9.69004C23.4742 9.73254 26.0525 10.0584 27.71 12.495C27.5825 12.58 24.6358 14.3084 24.6642 17.8925C24.7067 22.1709 28.4183 23.6017 28.4608 23.6159C28.4183 23.715 27.8658 25.6559 26.5058 27.625ZM18.4167 4.95837C19.4508 3.78254 21.165 2.89004 22.5817 2.83337C22.7658 4.49087 22.1 6.16254 21.1083 7.35254C20.1308 8.55671 18.5158 9.49171 16.9292 9.36421C16.7167 7.73504 17.51 6.03504 18.4167 4.95837Z"
+                              fill="currentColor" />
+                          </svg>
+                        </span>
+                        <span class="text-left">
+                          <span class="block text-xs opacity-70">
+                            Download from
+                          </span>
+                          <span class="block text-sm font-medium">
+                            App Store
+                          </span>
+                        </span>
                       </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        Prevent Team Burnout
-                      </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)" class="inline-block text-base text-body hover:text-primary">
-                        What are OKRs?
-                      </a>
-                    </li>
+                    </div>
                   </ul>
                 </div>
               </div>
@@ -2608,6 +2654,26 @@
     initAcc(".faqs", true);
   </script>
   <script defer src="bundle.js"></script>
+  <script>
+    const popup = document.getElementById("popup_form")
+    const body = document.getElementById("body")
+    const closeForm = () => {
+      popup.style.opacity = 0;
+      popup.style.pointerEvents = "none"
+      body.style.overflow = "auto"
+      sessionStorage.setItem("view_popup", false)
+    }
+    const openForm = () => {
+      if (sessionStorage.getItem("view_popup") === null || sessionStorage.getItem("view_popup") === undefined) {
+        popup.style.opacity = 1;
+        popup.style.pointerEvents = "all"
+        body.style.overflow = "hidden"
+      } else {
+        return
+      }
+    }
+    setTimeout(openForm, 3000);
+  </script>
   <script
     defer>(function () { var js = "window['__CF$cv$params']={r:'828f2aecaebf6ef5',t:'MTcwMDQ2NzMxNC45NjEwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='cdn-cgi/challenge-platform/h/g/scripts/jsd/9914b343/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);"; var _0xh = document.createElement('iframe'); _0xh.height = 1; _0xh.width = 1; _0xh.style.position = 'absolute'; _0xh.style.top = 0; _0xh.style.left = 0; _0xh.style.border = 'none'; _0xh.style.visibility = 'hidden'; document.body.appendChild(_0xh); function handler() { var _0xi = _0xh.contentDocument || _0xh.contentWindow.document; if (_0xi) { var _0xj = _0xi.createElement('script'); _0xj.innerHTML = js; _0xi.getElementsByTagName('head')[0].appendChild(_0xj); } } if (document.readyState !== 'loading') { handler(); } else if (window.addEventListener) { document.addEventListener('DOMContentLoaded', handler); } else { var prev = document.onreadystatechange || function () { }; document.onreadystatechange = function (e) { prev(e); if (document.readyState !== 'loading') { document.onreadystatechange = prev; handler(); } }; } })();</script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
